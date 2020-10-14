@@ -1,0 +1,55 @@
+/* need to make it responsive / mobile friendly */
+body {
+  background-color: black;
+}
+
+.game {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-image: url('https://cdn.glitch.com/d2e71704-5bbc-4f48-8d58-725619329cf3%2Fdungeon_bg_by_neoriceisgood_d2woyw1.png?v=1602559245482');
+  background-repeat: no-repeat;
+  background-size: 1200px 600px;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+.todo {
+  font-family: Silkscreen;
+  margin-left: 180px;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+#knight {
+  position: relative;
+  left: 0px;
+  margin-left: 250px;
+  height: 300px;
+  margin-top: 225px;
+}
+
+#ogre {
+  transform: scaleX(-1);
+  margin-left: 0px;
+  margin-right: auto;
+  height: 200px;
+  margin-top: 125px;
+}
+
+#health {
+  position: absolute;
+  margin-top: 320px;
+  margin-left: 630px;
+  margin-right: auto;
+  
+}
+
+.heart {
+  height:30px;
+  filter: blur(1.5px);
+}
+
+ @font-face { font-family: Silkscreen; src: url('https://cdn.glitch.com/d2e71704-5bbc-4f48-8d58-725619329cf3%2Fslkscr.ttf?v=1602561954078'); } 
