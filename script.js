@@ -1,5 +1,6 @@
 /* 
 Credit: I did not create any of the artwork. Used in accordance with license / permission from the source websites-
+Font- Silkscreen https://www.fontsquirrel.com/fonts/list/classification/pixel
 Ogre- https://0x72.itch.io/dungeontileset-ii?download
 Knight- by rvros https://rvros.itch.io/animated-pixel-knight
 Background- by Neoriceisgood https://www.deviantart.com/neoriceisgood/art/Dungeon-BG-175845025
