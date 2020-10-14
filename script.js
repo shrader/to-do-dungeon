@@ -1,5 +1,5 @@
 /* 
-Credit: I did not create any of the artwork. Used in accordance with license / permission from the source websites-
+Credit: I did not create any of the artwork, other awesome and generous people did. Check them out. (Used in accordance with license / permission from the source websites)
 Font- Silkscreen https://www.fontsquirrel.com/fonts/list/classification/pixel
 Ogre- https://0x72.itch.io/dungeontileset-ii?download
 Knight- by rvros https://rvros.itch.io/animated-pixel-knight
