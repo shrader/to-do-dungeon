@@ -44,7 +44,7 @@ let item3HTML = document.getElementById("item3");
 let index = 0;
 let ogreIndex = 0;
 let strikeAnimation;
-let startAnimation = setInterval(change, 200);
+let startAnimation = setInterval(changeAnimation, 200);
 let ogreAnimation = setInterval(animateOgre, 200);
 let welcome = alert("Welcome to the Dungeon of TO-DO! The only way to escape is to complete your top 3 to-do list items. Answer the questions and click on the text when you've completed an item. Good luck!");
 let item1 = prompt("What is your highest priority to-do of the day?");
@@ -92,7 +92,7 @@ let hearts = {
 function item1Click() {
   if (!checked.item1){
     item1HTML.innerHTML = "<del>" + item1HTML.innerHTML + "</del>";
-    clickChange();
+    startStrike();
     checked.item1 = true;
     setTimeout(hearts.heart1.hide, 500);
     setTimeout(deadOgre, 500);
@@ -108,7 +108,7 @@ function item1Click() {
 function item2Click() {
   if (!checked.item2){
     item2HTML.innerHTML = "<del>" + item2HTML.innerHTML + "</del>";
-    clickChange();
+    startStrike();
     checked.item2 = true;
     setTimeout(hearts.heart2.hide, 500);
     setTimeout(deadOgre, 500);
@@ -124,7 +124,7 @@ function item2Click() {
 function item3Click() {
   if (!checked.item3){
     item3HTML.innerHTML = "<del>" + item3HTML.innerHTML + "</del>";
-    clickChange();
+    startStrike();
     checked.item3 = true;
     setTimeout(hearts.heart3.hide, 500);
     setTimeout(deadOgre, 500);
@@ -138,7 +138,7 @@ function item3Click() {
 }
 
 
-function change() {
+function changeAnimation() {
     if (index >= 3) {
       knight.src = regKnight[0]
       index = 0;
@@ -150,12 +150,12 @@ function change() {
   
 }
 
-function change2 () {
+function changeAnimation2 () {
     if (index >= 4) {
       stopStrike();
       index = 0;
       knight.style.left = "0px";
-      startAnimation = setInterval(change, 200);
+      startAnimation = setInterval(changeAnimation, 200);
     }
     else {
       index += 1;
@@ -174,10 +174,10 @@ const stopStrike = function() {
 }
 
 
-function clickChange() {
+function startStrike() {
   stopAnimation();
   index = 0;
-  strikeAnimation = setInterval(change2, 200);
+  strikeAnimation = setInterval(changeAnimation2, 200);
 }
 
 function animateOgre() {
@@ -212,46 +212,4 @@ function hit () {
   setTimeout(recolor,500);
 }
 
-/*  refactor into objects?
 
-let listItems = {
-  "1":{
-    "checked":false,
-    "element":document.getElementById("item1"),
-  },
-  "2":{
-    "checked":false,
-    "element":document.getElementById("item2"),
-  },
-  "3":{
-    "checked":false,
-    "element":document.getElementById("item3"),
-  },
-};
-
-let knightObj = {
-  "HTMLelement":document.getElementById("knight"),
-  "idle":{
-    "frames":regKnight,
-    "start":function change() {
-              if (index >= 3) {
-                knight.src = this.frames[0]
-                index = 0;
-                }
-              else {
-                index += 1;
-                this.HTMLelement.src = this.frames[index];
-                }
-             },
-    "stop": clearInterval(startAnimation)
-    },
-  "strike":strike,
-  "index":index,
-  "animate":setInterval(change, 200)
-};
-
-let ogreObj = {
-  "HTMLelement":document.getElementById("ogre"),
-  "idle":ogreIdle,
-  "index":ogreIndex
-}; */
